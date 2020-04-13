@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
+import { GitHubService } from './github.service';
+import { repos } from './repos';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'httpGet';
+  show_repos: boolean = true;
+  show_following: boolean = false;
+
 }

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "httpGet"
+    }
+  },
+  "defaultProject": "httpGet",
+  "cli": {
+    "analytics": false
+  }
 }
