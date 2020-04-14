@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router';
 import { GitHubService } from './../github.service';
 import { repos } from './../repos';
 
@@ -10,15 +10,17 @@ import { repos } from './../repos';
 })
 export class ListReposComponent implements OnInit{
 
-  userName: string = "ajodochus"
+  userName: string;
   repos: repos[];
   loading: boolean = false;
   errorMessage;
 
-  constructor(private githubService: GitHubService) {
+  constructor(private githubService: GitHubService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.userName = this.route.snapshot.paramMap.get('user');
     this.getRepos();
   }
 

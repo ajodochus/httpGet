@@ -9,20 +9,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./list-following.component.css']
 })
 export class ListFollowingComponent implements OnInit {
-  userName: string = "ajodochus"
+  public userName: string;
   repos: repos[];
   loading: boolean = false;
   errorMessage;
 
-  id: string;
-  private sub: any;
 
-  constructor(private githubService: GitHubService ) {
+  constructor(private githubService: GitHubService,
+              private route: ActivatedRoute ) {
    
   }
 
   ngOnInit(): void {
-
+    this.userName = this.route.snapshot.paramMap.get('user');
     this.get_following();
   }
 
@@ -30,7 +29,7 @@ export class ListFollowingComponent implements OnInit {
     this.loading = true;
     this.errorMessage = "";
 
-    this.githubService.get_following_from_user('ajodochus')
+    this.githubService.get_following_from_user(this.userName)
       .subscribe(
         (response) => {                           //next() callback
           console.log('response received');

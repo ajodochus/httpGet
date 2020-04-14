@@ -5,8 +5,8 @@ import {ListFollowingComponent} from './list-following/list-following.component'
 
 
 const routes: Routes = [
-  {path: 'listRepos', component: ListReposComponent},
-  {path: 'listFollowing', component: ListFollowingComponent}
+  {path: 'listRepos/:user', component: ListReposComponent},
+  {path: 'listFollowing/:user', component: ListFollowingComponent}
 ];
 
 @NgModule({
