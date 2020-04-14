@@ -3,13 +3,15 @@
     <li>ajodochus</li>
     <li>rac2030</li>
 </ul>
-<div class="form-group">
+<div>
     <label for="userName">GitHub User</label>
     <input type="text" class="form-control" name="userName" [(ngModel)]="gitUserName">   
+</div>
+<div>
     <button type="button" (click)=gotoListRepos(gitUserName)>List Repos from User</button>
     <button type="button" (click)=gotoListFollowing(gitUserName)>List who am I following</button>
-</div>
 
+</div>
 <!--
 <nav>
     <a routerLink='/listRepos'>list repost</a>
