@@ -3,8 +3,19 @@
 <nav>
     <a routerLink='/listRepos'>list repost</a>
     <span> -- </span>
-    <a routerLink='/listFollowing'>list following</a>
+    <a routerLink='/listFollowing'>list followin</a>
+    <!-- <a [routerLink]="['/listFollowing']" [queryParams]="{q:'asdf'}">following</a> -->
+  
 </nav>
+
+<div class="form-group">
+    <label for="userName">GitHub User Name</label>
+    <input type="text" class="form-control" name="userName" [(ngModel)]="gitUserName">
+    <!--
+    <button type="button" (click)="getRepos(); toggle('')">Get Repos from User</button>
+    <button type="button" (click)="get_following(); toggle('')">Who am I following</button>
+    -->
+</div>
 
 
 <!-- 

@@ -8,7 +8,7 @@ import { repos } from './../repos';
   templateUrl: './list-repos.component.html',
   styleUrls: ['./list-repos.component.css']
 })
-export class ListReposComponent {
+export class ListReposComponent implements OnInit{
 
   userName: string = "ajodochus"
   repos: repos[];
@@ -18,16 +18,11 @@ export class ListReposComponent {
   constructor(private githubService: GitHubService) {
   }
 
-  public get_following(){
-    this.loading = true;
-    this.errorMessage = "";
-    this.githubService.get_following_from_user(this.userName)
-      .subscribe(
-        (response) => {                           //next() callback
-          console.log('response received');
-          this.repos = response;
-        });
+  ngOnInit(): void {
+    this.getRepos();
   }
+
+
 
   public getRepos() {
     this.loading = true;

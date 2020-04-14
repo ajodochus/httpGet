@@ -1,1 +1,22 @@
 <p>list-following works!</p>
+
+<table class='table'>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>HTML Url</th>
+        <th>description</th>
+        <th>created at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repo of repos;">
+        <td>{{repo.id}}</td>
+        <td>{{repo.name}}</td>
+        <td>{{repo.html_url}}</td>
+        <td>{{repo.description}}</td>
+        <td>{{repo.created_at}}</td>
+      </tr>
+    </tbody>
+  </table>

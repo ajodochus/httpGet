@@ -22,7 +22,7 @@ import { GitHubService } from './github.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [GitHubService],
+  providers: [GitHubService, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -22,5 +22,7 @@ export class GitHubService {
     return this.http.get(this.baseURL + 'users/' + userName + '/following')
   }
 
+
+
  
 }
