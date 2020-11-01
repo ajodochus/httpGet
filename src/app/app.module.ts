@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitHubService } from './github.service';
+//import { MatRadioModule } from '@angular/material/radio';
+
 //import { ListFollowingComponent } from './list-following/list-following.component';
 //import { ListReposComponent } from './list-repos/list-repos.component';
  
@@ -20,7 +22,8 @@ import { GitHubService } from './github.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    //MatRadioModule
   ],
   providers: [GitHubService, AppComponent],
   bootstrap: [AppComponent]
